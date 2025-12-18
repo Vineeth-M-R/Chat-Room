@@ -118,6 +118,11 @@ function App() {
     }
   }
 
+  function handleLogout() {
+    setIsInChatRoom(false)
+    setName('')
+  }
+
   async function handleSendMessage(e) {
     e.preventDefault()
     if (newMessage.trim() && name.trim()) {
@@ -193,7 +198,12 @@ function App() {
         {/* Header */}
         <header className="chat-room-header">
           <h2 className="chat-room-title">Chat Room</h2>
-          <p className="chat-room-user">You are: {name}</p>
+          <div className="chat-room-header-right">
+            <p className="chat-room-user">You are: {name}</p>
+            <button onClick={handleLogout} className="chat-room-logout-button">
+              Logout
+            </button>
+          </div>
         </header>
 
         {/* Message Feed */}

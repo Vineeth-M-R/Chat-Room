@@ -115,10 +115,40 @@
   color: #1a1a1a;
 }
 
+.chat-room-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .chat-room-user {
   font-size: 0.875rem;
   margin: 0;
   color: #6b7280;
+}
+
+.chat-room-logout-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: transparent;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chat-room-logout-button:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border-color: #9ca3af;
+}
+
+.chat-room-logout-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
 }
 
 /* Message Feed */
